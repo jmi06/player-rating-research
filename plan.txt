@@ -1,0 +1,40 @@
+Not every at bat is the same
+
+Aaron Judge vs A low leverage bullpen arm is not the same as
+Aaron Judge vs The Miz.
+
+Sure a hitter can bat .300, but who has he faced?
+Sure a pitcher can have sub 3 ERA, but who have THEY faced as well?
+
+There are metrics that exist to separate ballpark impact from BA, but we never look at players
+
+Each player start with 1500 ELO
+Treat each at bat as a game.
+
+HR's multiply K by a higher constant than a walk.
+
+THE PLAN:
+
+ELO + an Adjusted OBA:
+
+- Keep a running ELO throughout the season
+- For each Plate Appearance, determine how many plate apperances its worth.
+
+So maybe a poor pitcher is worth 1.2 PA's, because even if the hitter gets on base, it should be worth less.
+An elite pitcher could be worth like 0.8 PA's, because if the batter gets on base, it's technically higher than 1 (1/0.8).
+
+Plate appearances though
+
+After a PA, look at the old elo, calculate how many PA's its worth, then update the elo.
+
+
+batter wPA should be = 10^((league average pitcher-R_p)/D)
+try D being 2000.
+
+This assumes that baseball is 50/50, but its not its more like 32/68. So we can use that 32% on base metric, or we can calculate it often.
+K should also be between 0 and 1
+Anchor expectation to the league mean
+
+adjOBP = on base/ weighted pas
+
+or adjOBP = μ + Σ(OB − E_OB) / PA
